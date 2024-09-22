@@ -47,7 +47,7 @@ const handleCloseModal = function () {
 };
 
 const handleClickLogo = function () {
-  window.location.href = "http://127.0.0.1:8080/";
+  window.location.href = "#";
 };
 
 // Listeners

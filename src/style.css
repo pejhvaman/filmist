@@ -151,7 +151,7 @@ body {
 
 .overlay {
   position: fixed;
-  background: #1f102c98;
+  background: #1f102cb7;
   width: 100vw;
   height: 100vh;
   top: 50%;
@@ -281,8 +281,13 @@ body {
     font-size: 0.6rem;
   }
 
+  .contact-btn {
+    padding-top: 0.2rem !important;
+    padding: 0.3rem 1.1rem;
+  }
+
   .logo {
-    width: 50px;
+    width: 60px;
   }
 
   .modal {
