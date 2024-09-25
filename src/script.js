@@ -8,7 +8,8 @@ const closeMenuBtn = document.querySelector(".close-menu"),
   overlay = document.querySelector(".overlay"),
   openModalBtns = document.querySelectorAll(".contact-btn"),
   closeModalBtn = document.querySelector(".close-modal"),
-  logo = document.querySelector(".logo");
+  logo = document.querySelector(".logo"),
+  sendMsgBtn = document.querySelector(".submit-msg");
 
 // Helper functions
 
@@ -50,6 +51,13 @@ const handleClickLogo = function () {
   window.location.href = "#";
 };
 
+const handleSubmitMsg = function (e) {
+  e.preventDefault();
+  toggleClass([modal, overlay], "hidden");
+  //clear inputs
+  //...
+};
+
 // Listeners
 showMenuBtn.addEventListener("click", handleShowMenu);
 closeMenuBtn.addEventListener("click", handleCloseMenu);
@@ -58,3 +66,4 @@ document.addEventListener("keydown", handleEscModal);
 overlay.addEventListener("click", handleCloseModal);
 logo.addEventListener("click", handleClickLogo);
 closeModalBtn.addEventListener("click", handleCloseModal);
+sendMsgBtn.addEventListener("click", handleSubmitMsg);
