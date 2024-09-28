@@ -569,7 +569,7 @@ body {
 
 .card {
   margin: 0.5rem;
-  border-radius: 24px;
+  border-radius: 16px;
   overflow: hidden;
   position: relative;
   height: 24rem;
@@ -590,20 +590,32 @@ body {
 
 .card-like {
   position: absolute;
-  right: 1rem;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  right: 0.5rem;
   top: 0.5rem;
-  padding: 0.5rem 0.9rem;
   border-radius: 50px;
-  font-weight: 800;
-  background: var(--primary-gradient);
+  background-color: #7ddbbd8e;
+  backdrop-filter: blur(8px);
+  background-image: url("../img/like.png");
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position: center;
+  cursor: pointer;
+  border: 2px solid #7ddbbd;
+}
+
+.card-like:hover {
+  opacity: 0.9;
 }
 
 .card-body {
   height: 16rem;
   padding: 1rem;
   background: var(--secondary-color);
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   position: absolute;
   bottom: 0;
   display: flex;
@@ -622,13 +634,14 @@ body {
 }
 
 .card-property {
-  border: 1px solid #8e6c9038;
+  border: 1px solid var(--tertiary-color-opacity);
   display: block;
   width: fit-content;
   padding: 0.1rem 0.15rem 0.15rem 0.15rem;
   margin: 0.1rem;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
@@ -642,7 +655,9 @@ body {
   font-size: 0.9rem;
   line-height: 1.2;
   text-align: justify;
+  margin: 1rem 0;
 }
+
 .card-order {
   display: flex;
   justify-content: space-between;
@@ -665,6 +680,15 @@ body {
   font-size: 1.4rem;
 }
 .card-add {
+  display: block;
+  height: fit-content;
+  font-size: 0.8rem;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  background: var(--tertiary-gradient);
+  color: var(--fourth-color);
+  text-transform: capitalize;
+  margin-top: 0.4rem;
 }
 
 .hidden {
