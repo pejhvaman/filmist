@@ -528,7 +528,7 @@ body {
 
 .section-header {
   text-transform: uppercase;
-  margin: 3rem;
+  margin: 3rem 0;
   display: flex;
   justify-content: space-between;
 }
@@ -547,15 +547,17 @@ body {
   height: fit-content;
   margin-top: 2.5rem;
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 16px;
   background: var(--tertiary-gradient);
-  padding: 0.8rem 1.2rem;
+  padding: 0.5rem 1rem;
+  font-size: smaller;
   color: var(--fourth-color) !important;
   transition: all 0.2s ease-in;
+  opacity: 0.9;
 }
 
 .more-btn:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .more-btn:active {
@@ -565,14 +567,19 @@ body {
 .cards-list {
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card {
   margin: 0.5rem;
   border-radius: 16px;
+  border-top-right-radius: 30px;
   overflow: hidden;
   position: relative;
   height: 24rem;
+  width: 280px;
+  color: var(--tertiary-color-darker);
 }
 
 .card-poster {
@@ -603,7 +610,7 @@ body {
   background-size: inherit;
   background-position: center;
   cursor: pointer;
-  border: 2px solid #7ddbbd;
+  border: 4px solid #7ddbbd;
 }
 
 .card-like:hover {
@@ -650,10 +657,11 @@ body {
 }
 
 .card-description {
-  height: 6rem;
+  height: 5.5rem;
   overflow: hidden;
   font-size: 0.9rem;
   line-height: 1.2;
+  font-weight: 600;
   text-align: justify;
   margin: 1rem 0;
 }
@@ -679,16 +687,23 @@ body {
   font-weight: 800;
   font-size: 1.4rem;
 }
+
 .card-add {
   display: block;
   height: fit-content;
   font-size: 0.8rem;
+  font-weight: 600;
   padding: 0.6rem 1rem;
   border-radius: 12px;
   background: var(--tertiary-gradient);
   color: var(--fourth-color);
   text-transform: capitalize;
   margin-top: 0.4rem;
+  cursor: pointer;
+}
+
+.card-add:hover {
+  opacity: 0.9;
 }
 
 .hidden {
@@ -828,6 +843,27 @@ body {
   .cards-list {
     flex-wrap: wrap;
   }
+
+  .card {
+    width: 250px;
+  }
+
+  .section-header {
+    margin: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .section-name {
+    margin: 0.2rem 0;
+  }
+
+  .more-btn {
+    font-size: 0.5rem;
+    margin-top: 1.3rem;
+    padding: 0.5rem 0.7rem;
+    letter-spacing: 2px;
+    text-wrap: nowrap;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -853,6 +889,9 @@ body {
     visibility: hidden;
     display: none;
   }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
 }
 /* laptop */
 @media (min-width: 1024px) and (max-width: 1439px) {
