@@ -45,13 +45,13 @@ body {
 .root {
   background-color: var(--fourth-color);
   width: 100%;
-  display: felx;
-  flex-direction: column;
-  align-items: center;
   max-height: max-content;
   min-height: 100vh;
-  /* overflow: hidden; */
   position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -66,7 +66,7 @@ body {
   position: relative;
   padding: 1rem 2rem;
   background: var(--secondary-color-opacity);
-  box-shadow: 0px 4px 10px 0px #bfa9c07d;
+  box-shadow: 0px 4px 10px 0px #735c757d;
 }
 
 .logo {
@@ -84,7 +84,6 @@ body {
 }
 
 .menu li {
-  width: 20%;
   text-align: center;
 }
 
@@ -94,7 +93,7 @@ body {
   text-align: center;
   padding: 0.8rem 1rem;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: capitalize;
   cursor: pointer;
   transition: all 0.2s linear;
@@ -123,7 +122,7 @@ body {
 .contact-btn {
   text-transform: uppercase;
   padding: 0.6rem 1.8rem;
-  padding-top: 0.5rem;
+  padding-top: 0.55rem;
   line-height: 24px;
 }
 
@@ -282,6 +281,8 @@ body {
 #search::placeholder {
   text-transform: capitalize;
   color: var(--tertiary-color-opacity);
+  vertical-align: middle;
+  opacity: 0.5;
 }
 
 .search-btn {
@@ -290,11 +291,12 @@ body {
   background: var(--tertiary-gradient);
   height: 3rem;
   padding: 0.6rem 1.8rem;
-  padding-top: 0.7rem;
+  padding-top: 0.75rem;
   text-transform: uppercase;
   line-height: 1.5;
   cursor: pointer;
   font-weight: 600;
+  transition: opacity 0.2s linear;
 }
 
 .search-btn:active {
@@ -302,6 +304,7 @@ body {
 }
 
 .header-poster {
+  display: block;
   max-width: 16rem;
   height: 22rem;
   border-radius: 33px;
@@ -321,8 +324,8 @@ body {
   top: 4rem;
   border-radius: 24px;
   font-size: 1.4rem;
-  color: var(--tertiary-color);
-  background: var(--secondary-gradient);
+  color: var(--fourth-color);
+  background: var(--tertiary-gradient);
 }
 
 .header-off {
@@ -335,7 +338,7 @@ body {
   align-content: center;
   font-size: 1.8rem;
   background: var(--primary-color-darker);
-  color: var(--tertiary-gradient);
+  color: var(--fourth-color);
 }
 
 .modal {
@@ -489,7 +492,7 @@ body {
   background: var(--secondary-color-darker);
   padding: 0.3rem 1rem 0.4rem 1rem;
   border-radius: 4px;
-  color: var(--tertiary-color-darker);
+  color: var(--tertiary-color);
   margin-right: 0.5rem;
   cursor: pointer;
   font-weight: 600;
@@ -504,8 +507,94 @@ body {
   opacity: 0.9;
 }
 
+.site-body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.section {
+  margin: 6rem 0;
+}
+
+.cards {
+  margin-top: 6rem;
+}
+
+.section-header {
+  text-transform: uppercase;
+  margin: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-name {
+  margin: 1rem 0;
+}
+
+.section-title {
+  color: var(--tertiary-color-darker);
+  font-weight: 800;
+}
+
+.more-btn {
+  display: block;
+  height: fit-content;
+  margin-top: 2.5rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background: var(--tertiary-gradient);
+  padding: 0.8rem 1.2rem;
+  color: var(--fourth-color) !important;
+  transition: all 0.2s ease-in;
+}
+
+.more-btn:hover {
+  opacity: 0.8;
+}
+
+.more-btn:active {
+  transform: scale(0.9);
+}
+
+.cards-list {
+  display: flex;
+  list-style: none;
+}
+.card {
+  border: 1px solid lightblue;
+  margin: 0 1rem;
+  border-radius: 16px;
+}
+.card-off {
+}
+.card-title {
+}
+.card-properties {
+}
+.card-property {
+}
+.card-description {
+}
+.card-order {
+}
+.card-price-label {
+}
+.card-price {
+}
+.card-add {
+}
+
 .hidden {
   visibility: hidden;
+}
+
+.no-scroll {
+  height: 100%;
+  overflow-y: hidden;
 }
 /* mobile */
 @media (max-width: 767px) {
@@ -555,8 +644,8 @@ body {
   }
 
   .contact-btn {
-    padding-top: 0.2rem !important;
     padding: 0.3rem 1.1rem;
+    padding-top: 0.25rem !important;
   }
 
   .logo {
@@ -612,6 +701,28 @@ body {
 
   .write-us .title {
     margin: 0.5rem 0;
+  }
+
+  .site-header-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+  }
+
+  .header-left {
+    width: 90%;
+  }
+  .header-right {
+    margin-left: unset;
+    width: fit-content;
+  }
+
+  .site-body {
+    padding: unset;
+  }
+
+  .cards-list {
+    flex-wrap: wrap;
   }
 }
 /* tablet */

@@ -35,6 +35,7 @@ const handleCloseMenu = function (e) {
 const handleOpanModal = function (e) {
   e.preventDefault();
   toggleClass([modal, overlay], "hidden");
+  document.body.classList.add("no-scroll");
 };
 
 const handleEscModal = function (e) {
@@ -45,6 +46,7 @@ const handleEscModal = function (e) {
 
 const handleCloseModal = function () {
   toggleClass([modal, overlay], "hidden");
+  document.body.classList.remove("no-scroll");
 };
 
 const handleClickLogo = function () {
