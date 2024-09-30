@@ -519,6 +519,10 @@ body {
 
 .section {
   margin: 6rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cards {
@@ -650,6 +654,7 @@ body {
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .card-property:first-child {
@@ -705,6 +710,42 @@ body {
 .card-add:hover {
   opacity: 0.9;
 }
+
+/* gallery */
+
+.gallery .section-header {
+  align-self: center;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.tab {
+  padding: 0.6rem 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background: var(--secondary-color-darker);
+  color: var(--tertiary-color-darker);
+  cursor: pointer;
+  margin: 0.2rem;
+}
+
+.tab-active {
+  background: var(--tertiary-gradient);
+  color: var(--secondary-color);
+}
+
+.tab-num {
+  margin-right: 0.2rem;
+}
+/*  */
 
 .hidden {
   visibility: hidden;
@@ -824,7 +865,7 @@ body {
   .site-header-content {
     flex-direction: column;
     align-items: center;
-    padding: 3rem 0;
+    padding: 3rem 0 6rem 0;
   }
 
   .header-left {
@@ -859,7 +900,7 @@ body {
 
   .more-btn {
     font-size: 0.5rem;
-    margin-top: 1.3rem;
+    margin-top: 1.6rem;
     padding: 0.5rem 0.7rem;
     letter-spacing: 2px;
     text-wrap: nowrap;
