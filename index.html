@@ -296,10 +296,10 @@
             </div>
           </div>
           <ul class="tabs">
-            <li class="tab" data-tab="1">
+            <li class="tab tab-active" data-tab="1">
               <p class="tab-title"><span class="tab-num">01</span>tab title</p>
             </li>
-            <li class="tab tab-active" data-tab="2">
+            <li class="tab" data-tab="2">
               <p class="tab-title">
                 <span class="tab-num">01</span>tab another
               </p>
@@ -316,11 +316,17 @@
               </p>
             </li>
           </ul>
-          <!-- content -->
-          <div class="tab-content tab-content-1" data-tab-content="1">
+          <div
+            class="tab-content tab-content-1 tab-content-active"
+            data-tab-content="1"
+          >
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
-                <img src="./img/joker.jpg" alt="image 1" />
+                <img
+                  src="./img/joker-lazy.jpg"
+                  alt="image 1"
+                  data-original="./img/joker.jpg"
+                />
               </a>
               <div class="gallery-overlay">
                 <div class="gallery-overlay-text">Text str</div>
@@ -328,7 +334,11 @@
             </div>
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
-                <img src="./img/the-dark-knight.jpg" alt="image 2" />
+                <img
+                  src="./img/the-dark-knight-lazy.jpg"
+                  alt="image 2"
+                  data-original="./img/the-dark-knight.jpg"
+                />
               </a>
               <div class="gallery-overlay">
                 <div class="gallery-overlay-text">Text str</div>
@@ -336,7 +346,11 @@
             </div>
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
-                <img src="./img/the-god-father.jpg" alt="image 3" />
+                <img
+                  src="./img/the-god-father-lazy.jpg"
+                  alt="image 3"
+                  data-original="./img/the-god-father.jpg"
+                />
               </a>
               <div class="gallery-overlay">
                 <div class="gallery-overlay-text">Text str</div>
@@ -344,7 +358,11 @@
             </div>
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
-                <img src="./img/v-for-vendetta.jpg" alt="image 4" />
+                <img
+                  src="./img/v-for-vendetta-lazy.jpg"
+                  alt="image 4"
+                  data-original="./img/v-for-vendetta.jpg"
+                />
               </a>
               <div class="gallery-overlay">
                 <div class="gallery-overlay-text">Text str</div>
@@ -352,7 +370,11 @@
             </div>
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
-                <img src="./img/v-for-vendetta-header.jpg" alt="image 5" />
+                <img
+                  src="./img/joker-lazy.jpg"
+                  alt="image 6"
+                  data-original="./img/joker.jpg"
+                />
               </a>
               <div class="gallery-overlay">
                 <div class="gallery-overlay-text">Text str</div>
@@ -360,7 +382,11 @@
             </div>
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
-                <img src="./img/joker.jpg" alt="image 6" />
+                <img
+                  src="./img/the-dark-knight-lazy.jpg"
+                  alt="image 7"
+                  data-original="./img/the-dark-knight.jpg"
+                />
               </a>
               <div class="gallery-overlay">
                 <div class="gallery-overlay-text">Text str</div>
@@ -368,7 +394,25 @@
             </div>
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
-                <img src="./img/the-dark-knight.jpg" alt="image 7" />
+                <img
+                  src="./img/the-god-father-lazy.jpg"
+                  alt="image 8"
+                  data-original="./img/the-god-father.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-content-2" data-tab-content="2">
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-dark-knight-lazy.jpg"
+                  alt="image 1"
+                  data-original="./img/the-dark-knight.jpg"
+                />
               </a>
               <div class="gallery-overlay">
                 <div class="gallery-overlay-text">Text str</div>
@@ -376,12 +420,413 @@
             </div>
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
-                <img src="./img/the-god-father.jpg" alt="image 8" />
+                <img
+                  src="./img/joker-lazy.jpg"
+                  alt="image 2"
+                  data-original="./img/joker.jpg"
+                />
               </a>
               <div class="gallery-overlay">
                 <div class="gallery-overlay-text">Text str</div>
               </div>
             </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-god-father-lazy.jpg"
+                  alt="image 3"
+                  data-original="./img/the-god-father.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/v-for-vendetta-lazy.jpg"
+                  alt="image 4"
+                  data-original="./img/v-for-vendetta.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/joker-lazy.jpg"
+                  alt="image 6"
+                  data-original="./img/joker.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-dark-knight-lazy.jpg"
+                  alt="image 7"
+                  data-original="./img/the-dark-knight.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-god-father-lazy.jpg"
+                  alt="image 8"
+                  data-original="./img/the-god-father.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-content-3" data-tab-content="3">
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-god-father-lazy.jpg"
+                  alt="image 1"
+                  data-original="./img/the-god-father.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-dark-knight-lazy.jpg"
+                  alt="image 2"
+                  data-original="./img/the-dark-knight.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/joker-lazy.jpg"
+                  alt="image 3"
+                  data-original="./img/joker.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/v-for-vendetta-lazy.jpg"
+                  alt="image 4"
+                  data-original="./img/v-for-vendetta.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/joker-lazy.jpg"
+                  alt="image 5"
+                  data-original="./img/joker.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-dark-knight-lazy.jpg"
+                  alt="image 6"
+                  data-original="./img/the-dark-knight.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-god-father-lazy.jpg"
+                  alt="image 7"
+                  data-original="./img/the-god-father.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-content-4" data-tab-content="4">
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-god-father-lazy.jpg"
+                  alt="image 1"
+                  data-original="./img/the-god-father.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-dark-knight-lazy.jpg"
+                  alt="image 2"
+                  data-original="./img/the-dark-knight.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/joker-lazy.jpg"
+                  alt="image 3"
+                  data-original="./img/joker.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/v-for-vendetta-lazy.jpg"
+                  alt="image 4"
+                  data-original="./img/v-for-vendetta.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/joker-lazy.jpg"
+                  alt="image 5"
+                  data-original="./img/joker.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-dark-knight-lazy.jpg"
+                  alt="image 6"
+                  data-original="./img/the-dark-knight.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-god-father-lazy.jpg"
+                  alt="image 7"
+                  data-original="./img/the-god-father.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-content-5" data-tab-content="5">
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-god-father-lazy.jpg"
+                  alt="image 1"
+                  data-original="./img/the-god-father.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-dark-knight-lazy.jpg"
+                  alt="image 2"
+                  data-original="./img/the-dark-knight.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/joker-lazy.jpg"
+                  alt="image 3"
+                  data-original="./img/joker.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/v-for-vendetta-lazy.jpg"
+                  alt="image 4"
+                  data-original="./img/v-for-vendetta.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/joker-lazy.jpg"
+                  alt="image 5"
+                  data-original="./img/joker.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-dark-knight-lazy.jpg"
+                  alt="image 6"
+                  data-original="./img/the-dark-knight.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <a href="#" class="gallery-picture">
+                <img
+                  src="./img/the-god-father-lazy.jpg"
+                  alt="image 7"
+                  data-original="./img/the-god-father.jpg"
+                />
+              </a>
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-text">Text str</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section cards">
+          <div class="section-header">
+            <div class="section-intro">
+              <h4 class="section-name">top films</h4>
+              <h1 class="section-title">most watched</h1>
+            </div>
+            <a href="#" class="more-btn">view all</a>
+          </div>
+          <div class="slider-container">
+            <ul class="slider">
+              <li class="slide">
+                <a href="#" class="slide-picture-wrapper">
+                  <img
+                    src="./img/joker-lazy.jpg"
+                    alt="slide 1"
+                    data-original="./img/joker.jpg"
+                  />
+                </a>
+              </li>
+              <li class="slide">
+                <a href="#" class="slide-picture-wrapper">
+                  <img
+                    src="./img/the-dark-knight-lazy.jpg"
+                    alt="slide 2"
+                    data-original="./img/the-dark-knight.jpg"
+                  />
+                </a>
+              </li>
+              <li class="slide">
+                <a href="#" class="slide-picture-wrapper">
+                  <img
+                    src="./img/the-god-father-lazy.jpg"
+                    alt="slide 3"
+                    data-original="./img/the-god-father.jpg"
+                  />
+                </a>
+              </li>
+              <li class="slide">
+                <a href="#" class="slide-picture-wrapper">
+                  <img
+                    src="./img/v-for-vendetta-lazy.jpg"
+                    alt="slide 4"
+                    data-original="./img/v-for-vendetta.jpg"
+                  />
+                </a>
+              </li>
+              <li class="slide">
+                <a href="#" class="slide-picture-wrapper">
+                  <img
+                    src="./img/joker-lazy.jpg"
+                    alt="slide 5"
+                    data-original="./img/joker.jpg"
+                  />
+                </a>
+              </li>
+              <li class="slide">
+                <a href="#" class="slide-picture-wrapper">
+                  <img
+                    src="./img/the-dark-knight-lazy.jpg"
+                    alt="slide 6"
+                    data-original="the-dark-knight.jpg"
+                  />
+                </a>
+              </li>
+            </ul>
+            <ul class="slider-dots">
+              <li class="dot dot-active"></li>
+              <li class="dot"></li>
+              <li class="dot"></li>
+              <li class="dot"></li>
+              <li class="dot"></li>
+              <li class="dot"></li>
+            </ul>
+            <div class="slider-overlay"></div>
           </div>
         </section>
       </main>
