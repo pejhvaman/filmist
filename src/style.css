@@ -713,7 +713,7 @@ body {
 
 /* gallery */
 
-.gallery .section-header {
+.galleries .section-header {
   align-self: center;
   text-align: center;
 }
@@ -727,6 +727,8 @@ body {
 }
 
 .tab {
+  flex-grow: 1;
+  text-align: center;
   padding: 0.6rem 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -745,6 +747,62 @@ body {
 .tab-num {
   margin-right: 0.2rem;
 }
+
+.tab-content img {
+  display: block;
+  width: 15rem;
+  height: 20rem;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.tab-content {
+  margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-item {
+  position: relative;
+  margin: 0.5rem;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.gallery-overlay {
+  width: 0;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  left: 200%;
+  position: absolute;
+  background: var(--tertiary-color-opacity);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  left: 0;
+  width: 100%;
+}
+
+.gallery-overlay-text {
+  position: absolute;
+  text-wrap: nowrap;
+  overflow: hidden;
+  font-weight: 600;
+  color: var(--fourth-color);
+  font-size: 1.2rem;
+  font-style: italic;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+
 /*  */
 
 .hidden {
@@ -839,6 +897,7 @@ body {
   .write-us {
     padding: 0.2rem;
     width: 90%;
+    min-height: 50%;
   }
 
   .write-form input:first-child {
