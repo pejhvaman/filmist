@@ -71,7 +71,7 @@ body {
 }
 
 .logo {
-  width: 70px;
+  width: 80px;
   cursor: pointer;
 }
 
@@ -162,6 +162,10 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 3rem;
+}
+
+.site-header-content,
+.site-footer {
   background-image: radial-gradient(
       circle at 44% 13%,
       hsla(237, 0%, 100%, 0.05) 0%,
@@ -906,7 +910,76 @@ body {
   right: 2rem;
 }
 
-/*  */
+/* footer */
+.site-footer {
+  margin-bottom: 0;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.site-footer .section-header {
+  padding: 3rem 18rem;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid var(--tertiary-color);
+}
+
+.site-footer .contact-btn {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  padding-top: 0.9rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  background: var(--primary-gradient);
+  color: var(--tertiary-color-darker) !important;
+  font-weight: 600;
+  box-shadow: -1px 1px 4px 2px var(--tertiary-color-opacity);
+}
+
+.site-footer .section-name {
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+  font-size: larger;
+}
+
+.site-footer .section-title {
+  color: var(--fourth-color);
+}
+
+.useful-links {
+  list-style: none;
+  width: 90%;
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.useful-links .useful-link {
+  display: block;
+  padding: 0.6rem 1rem;
+  padding-top: 1rem;
+  text-transform: capitalize;
+  color: var(--fourth-color-opacity);
+  padding-top: 0.45rem;
+  border-radius: 4px;
+  background: var(--tertiary-color-opacity);
+}
+
+.site-footer .logo {
+  margin: 0 auto 3rem auto;
+}
+
+.copyright {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: smaller;
+  text-transform: capitalize;
+  margin: 0.3rem 0 0.3rem 0;
+  font-style: italic;
+}
 
 .hidden {
   visibility: hidden;
@@ -969,7 +1042,7 @@ body {
   }
 
   .logo {
-    width: 60px;
+    width: 80px;
   }
 
   .modal {
@@ -1080,6 +1153,33 @@ body {
   }
   .slider-btn-right {
     right: 0.6rem;
+  }
+
+  .site-footer .section-header {
+    padding: 3rem 1rem;
+  }
+
+  .site-footer .contact-btn {
+    font-size: 1rem;
+    padding: 0;
+    padding: 0.6rem 1rem !important;
+    letter-spacing: normal;
+  }
+
+  .useful-links {
+    margin: 1.5rem auto;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .useful-links li {
+    width: fit-content;
+    text-align: center;
+  }
+
+  .useful-link {
+    width: fit-content;
+    padding-top: 0.6rem;
   }
 }
 
