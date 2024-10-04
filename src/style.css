@@ -965,7 +965,7 @@ body {
   color: var(--fourth-color-opacity);
   padding-top: 0.45rem;
   border-radius: 4px;
-  background: var(--tertiary-color-opacity);
+  background: #7f5c8175;
 }
 
 .site-footer .logo {
