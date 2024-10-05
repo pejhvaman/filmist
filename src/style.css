@@ -122,9 +122,8 @@ body {
 
 .contact-btn {
   text-transform: uppercase;
-  padding: 0.6rem 1.8rem;
-  /* padding-top: 0.55rem; */
-  line-height: 24px;
+  padding: 1rem 1.8rem;
+  line-height: 1;
 }
 
 .menu-active {
@@ -563,6 +562,7 @@ body {
   color: var(--fourth-color) !important;
   transition: all 0.2s ease-in;
   opacity: 0.9;
+  line-height: 1;
 }
 
 .more-btn:hover {
@@ -929,7 +929,6 @@ body {
 .site-footer .contact-btn {
   margin-top: 1rem;
   padding: 1rem 2rem;
-  /* padding-top: 0.9rem; */
   font-size: 1.2rem;
   border-radius: 50px;
   background: var(--primary-gradient);
@@ -1037,8 +1036,7 @@ body {
   }
 
   .contact-btn {
-    padding: 0.3rem 1.1rem;
-    /* padding-top: 0.25rem !important; */
+    padding: 0.8rem 1.1rem;
   }
 
   .logo {
