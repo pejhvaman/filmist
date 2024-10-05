@@ -123,7 +123,7 @@ body {
 .contact-btn {
   text-transform: uppercase;
   padding: 0.6rem 1.8rem;
-  padding-top: 0.55rem;
+  /* padding-top: 0.55rem; */
   line-height: 24px;
 }
 
@@ -296,7 +296,7 @@ body {
   background: var(--tertiary-gradient);
   height: 3rem;
   padding: 0.6rem 1.8rem;
-  padding-top: 0.75rem;
+  /* padding-top: 0.75rem; */
   text-transform: uppercase;
   line-height: 1.5;
   cursor: pointer;
@@ -929,7 +929,7 @@ body {
 .site-footer .contact-btn {
   margin-top: 1rem;
   padding: 1rem 2rem;
-  padding-top: 0.9rem;
+  /* padding-top: 0.9rem; */
   font-size: 1.2rem;
   border-radius: 50px;
   background: var(--primary-gradient);
@@ -960,10 +960,10 @@ body {
 .useful-links .useful-link {
   display: block;
   padding: 0.6rem 1rem;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   text-transform: capitalize;
   color: var(--fourth-color-opacity);
-  padding-top: 0.45rem;
+  /* padding-top: 0.45rem; */
   border-radius: 4px;
   background: #7f5c8175;
 }
@@ -1038,7 +1038,7 @@ body {
 
   .contact-btn {
     padding: 0.3rem 1.1rem;
-    padding-top: 0.25rem !important;
+    /* padding-top: 0.25rem !important; */
   }
 
   .logo {
@@ -1073,7 +1073,8 @@ body {
   .write-us {
     padding: 0.2rem;
     width: 90%;
-    min-height: 50%;
+    /* min-height: 50%; */
+    height: -webkit-fill-available;
   }
 
   .write-form input:first-child {
@@ -1085,7 +1086,7 @@ body {
   }
 
   .submit-msg {
-    padding-top: 0.4rem;
+    /* padding-top: 0.4rem; */
     box-shadow: 0px 4px 10px 0px #bfa9c07d;
   }
 
@@ -1145,7 +1146,6 @@ body {
     width: 3rem;
     height: 3rem;
     font-size: 1.4rem;
-    padding-top: 0.4rem;
   }
 
   .slider-btn-left {
@@ -1179,7 +1179,7 @@ body {
 
   .useful-link {
     width: fit-content;
-    padding-top: 0.6rem;
+    /* padding-top: 0.6rem; */
   }
 }
 
