@@ -9,7 +9,9 @@ const closeMenuBtn = document.querySelector(".close-menu"),
   openModalBtns = document.querySelectorAll(".contact-btn"),
   closeModalBtn = document.querySelector(".close-modal"),
   logo = document.querySelector(".logo"),
-  sendMsgBtn = document.querySelector(".submit-msg");
+  sendMsgBtn = document.querySelector(".submit-msg"),
+  cardsSection = document.querySelector(".cards"),
+  scrollBtn = document.querySelector(".explore");
 
 // Helper functions
 
@@ -60,6 +62,19 @@ const handleSubmitMsg = function (e) {
   //...
 };
 
+// const handleScrollTo = function () {
+//   const elToScroll = document.querySelector(".cards");
+//   const elToScrollCoords = elToScroll.getBoundingClientRect();
+//   window.scrollTo({
+//     left: elToScrollCoords.left + window.pageXOffset,
+//     top: elToScrollCoords.top + window.pageYOffset,
+//     behavior: "smooth",
+//   });
+// };
+
+const handleScrollTo = () =>
+  cardsSection.scrollIntoView({ behavior: "smooth" });
+
 // Listeners
 showMenuBtn.addEventListener("click", handleShowMenu);
 closeMenuBtn.addEventListener("click", handleCloseMenu);
@@ -69,3 +84,5 @@ overlay.addEventListener("click", handleCloseModal);
 logo.addEventListener("click", handleClickLogo);
 closeModalBtn.addEventListener("click", handleCloseModal);
 sendMsgBtn.addEventListener("click", handleSubmitMsg);
+
+scrollBtn.addEventListener("click", handleScrollTo);
