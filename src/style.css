@@ -753,6 +753,7 @@ body {
   color: var(--tertiary-color-darker);
   cursor: pointer;
   margin: 0.2rem;
+  /* transition: background 1s linear; */
 }
 
 .tab-active {

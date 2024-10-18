@@ -11,7 +11,10 @@ const closeMenuBtn = document.querySelector(".close-menu"),
   logo = document.querySelector(".logo"),
   sendMsgBtn = document.querySelector(".submit-msg"),
   cardsSection = document.querySelector(".cards"),
-  scrollBtn = document.querySelector(".explore");
+  scrollBtn = document.querySelector(".explore"),
+  tabsContainer = document.querySelector(".tabs"),
+  tabs = document.querySelectorAll(".tab"),
+  tabContents = document.querySelectorAll(".tab-content");
 
 // Helper functions
 
@@ -75,6 +78,20 @@ const handleSubmitMsg = function (e) {
 const handleScrollTo = () =>
   cardsSection.scrollIntoView({ behavior: "smooth" });
 
+const handleActiveTab = function (e) {
+  const curTab = e.target.closest(".tab");
+  if (!curTab) return;
+  const tabNum = Number(curTab.dataset.tab);
+  // console.log(curTab, tabNum);
+  const curContent = document.querySelector(`.tab-content-${tabNum}`);
+  // console.log(curContent);
+  tabs.forEach((t) => t.classList.remove("tab-active"));
+  curTab.classList.add("tab-active");
+
+  tabContents.forEach((tc) => tc.classList.remove("tab-content-active"));
+  curContent.classList.add("tab-content-active");
+};
+
 // Listeners
 showMenuBtn.addEventListener("click", handleShowMenu);
 closeMenuBtn.addEventListener("click", handleCloseMenu);
@@ -84,5 +101,5 @@ overlay.addEventListener("click", handleCloseModal);
 logo.addEventListener("click", handleClickLogo);
 closeModalBtn.addEventListener("click", handleCloseModal);
 sendMsgBtn.addEventListener("click", handleSubmitMsg);
-
 scrollBtn.addEventListener("click", handleScrollTo);
+tabsContainer.addEventListener("click", handleActiveTab);
