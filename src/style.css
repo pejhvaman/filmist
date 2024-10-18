@@ -69,10 +69,22 @@ body {
   background: var(--secondary-color-opacity);
   box-shadow: 0px 4px 10px 0px #735c757d;
   z-index: 70;
+  /* transition: translate 0.4s ease-in-out; */
 }
 
 .site-header.sticky {
   position: fixed;
+  animation: navFadeIn 0.5s ease-in-out 1;
+}
+
+@keyframes navFadeIn {
+  from {
+    transform: translateY(-8rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .logo {
@@ -539,6 +551,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 .cards {

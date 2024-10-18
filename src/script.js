@@ -17,7 +17,9 @@ const closeMenuBtn = document.querySelector(".close-menu"),
   tabContents = document.querySelectorAll(".tab-content"),
   siteHeader = document.querySelector(".site-header"),
   siteLogo = document.querySelector(".logo"),
-  menuItems = document.querySelectorAll(".menu-item");
+  menuItems = document.querySelectorAll(".menu-item"),
+  sections = document.querySelectorAll(".section"),
+  headerEl = document.querySelector(".header");
 
 // Helper functions
 
@@ -131,3 +133,47 @@ tabsContainer.addEventListener("click", handleActiveTab);
 siteHeader.addEventListener("mouseover", handleFadeMenuItems.bind(0.5));
 siteHeader.addEventListener("mouseout", handleFadeMenuItems.bind(1));
 siteHeader.addEventListener("click", handleClickMenu);
+
+// Observers
+// 1. Section revealer
+const sectionRevealer = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  const target = entry.target;
+
+  target.classList.remove("section-hidden");
+
+  observer.unobserve(target);
+};
+
+sections.forEach((s) => {
+  s.classList.add("section-hidden");
+
+  const sectionObserver = new IntersectionObserver(sectionRevealer, {
+    root: null,
+    threshold: 0,
+    rootMargin: "-200px",
+  });
+
+  sectionObserver.observe(s);
+});
+
+// 2. Sticky Nav.
+const navHeight = siteHeader.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+
+  if (entry.isIntersecting) siteHeader.classList.remove("sticky");
+  else siteHeader.classList.add("sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  rootMargin: `-${navHeight}px`,
+  threshold: 0,
+});
+
+headerObserver.observe(headerEl);
