@@ -14,7 +14,10 @@ const closeMenuBtn = document.querySelector(".close-menu"),
   scrollBtn = document.querySelector(".explore"),
   tabsContainer = document.querySelector(".tabs"),
   tabs = document.querySelectorAll(".tab"),
-  tabContents = document.querySelectorAll(".tab-content");
+  tabContents = document.querySelectorAll(".tab-content"),
+  siteHeader = document.querySelector(".site-header"),
+  siteLogo = document.querySelector(".logo"),
+  menuItems = document.querySelectorAll(".menu-item");
 
 // Helper functions
 
@@ -92,6 +95,26 @@ const handleActiveTab = function (e) {
   curContent.classList.add("tab-content-active");
 };
 
+const handleFadeMenuItems = function (e) {
+  const curItem = e.target.closest(".menu-item");
+  if (!curItem) return;
+  menuItems.forEach((mi) => (mi.style.opacity = this));
+  siteLogo.style.opacity = this;
+  curItem.style.opacity = 1;
+};
+
+const handleClickMenu = function (e) {
+  e.preventDefault();
+  const curItem = e.target.closest(".menu-item");
+  if (!curItem) return;
+  const id = curItem.getAttribute("href").slice(1);
+  menuItems.forEach((mi) => mi.classList.remove("menu-active"));
+
+  if (!curItem.classList.contains("contact-btn"))
+    curItem.classList.add("menu-active");
+  document.getElementById(`${id}`).scrollIntoView({ behavior: "smooth" });
+};
+
 // Listeners
 showMenuBtn.addEventListener("click", handleShowMenu);
 closeMenuBtn.addEventListener("click", handleCloseMenu);
@@ -103,3 +126,6 @@ closeModalBtn.addEventListener("click", handleCloseModal);
 sendMsgBtn.addEventListener("click", handleSubmitMsg);
 scrollBtn.addEventListener("click", handleScrollTo);
 tabsContainer.addEventListener("click", handleActiveTab);
+siteHeader.addEventListener("mouseover", handleFadeMenuItems.bind(0.5));
+siteHeader.addEventListener("mouseout", handleFadeMenuItems.bind(1));
+siteHeader.addEventListener("click", handleClickMenu);
