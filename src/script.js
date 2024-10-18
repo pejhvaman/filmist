@@ -112,7 +112,9 @@ const handleClickMenu = function (e) {
 
   if (!curItem.classList.contains("contact-btn"))
     curItem.classList.add("menu-active");
-  document.getElementById(`${id}`).scrollIntoView({ behavior: "smooth" });
+
+  if (id)
+    document.getElementById(`${id}`).scrollIntoView({ behavior: "smooth" });
 };
 
 // Listeners
