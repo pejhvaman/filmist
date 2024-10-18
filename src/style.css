@@ -625,6 +625,7 @@ body {
   width: 100%;
   height: 11rem;
   overflow: hidden;
+  z-index: 4 !important;
 }
 
 .card-picture {
@@ -632,6 +633,10 @@ body {
   width: 100%;
   height: 11rem;
   object-fit: cover;
+}
+
+.lazy-effect {
+  filter: blur(8px);
 }
 
 .card-like {
@@ -650,6 +655,7 @@ body {
   background-position: center;
   cursor: pointer;
   border: 4px solid #7ddbbd;
+  z-index: 2;
 }
 
 .card-like:hover {

@@ -19,7 +19,8 @@ const closeMenuBtn = document.querySelector(".close-menu"),
   siteLogo = document.querySelector(".logo"),
   menuItems = document.querySelectorAll(".menu-item"),
   sections = document.querySelectorAll(".section"),
-  headerEl = document.querySelector(".header");
+  headerEl = document.querySelector(".header"),
+  lazyImgs = document.querySelectorAll("img[data-original]");
 
 // Helper functions
 
@@ -177,3 +178,30 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(headerEl);
+
+// 3. lazy loading
+const lazyLoader = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+
+  const target = entry.target;
+  const originalSrc = target.dataset.original;
+
+  target.src = originalSrc;
+
+  target.addEventListener("load", () => target.classList.remove("lazy-effect"));
+
+  observer.unobserve(target);
+};
+
+lazyImgs.forEach((lazy) => {
+  lazy.classList.add("lazy-effect");
+
+  const lazyObserver = new IntersectionObserver(lazyLoader, {
+    root: null,
+    rootMargin: "200px",
+    threshold: 0,
+  });
+
+  lazyObserver.observe(lazy);
+});
