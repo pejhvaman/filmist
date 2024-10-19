@@ -854,7 +854,7 @@ body {
   margin: 0 auto;
   border-radius: 24px;
   overflow: hidden;
-  height: 20rem;
+  height: 26rem;
 }
 
 .slider {
@@ -1003,6 +1003,7 @@ body {
   /* padding-top: 0.45rem; */
   border-radius: 4px;
   background: #7f5c8175;
+  transition: opacity 0.3s linear;
 }
 
 .site-footer .logo {

@@ -24,7 +24,9 @@ const closeMenuBtn = document.querySelector(".close-menu"),
   leftArrow = document.querySelector(".slider-btn-left"),
   rightArrow = document.querySelector(".slider-btn-right"),
   slides = document.querySelectorAll(".slide"),
-  sliderDotsContainer = document.querySelector(".slider-dots");
+  sliderDotsContainer = document.querySelector(".slider-dots"),
+  usefulLinksContainer = document.querySelector(".useful-links"),
+  usefulLinks = document.querySelectorAll(".useful-link");
 
 // Helper functions
 
@@ -123,6 +125,13 @@ const handleClickMenu = function (e) {
     document.getElementById(`${id}`).scrollIntoView({ behavior: "smooth" });
 };
 
+const handleFadeLinks = function (e) {
+  const curLink = e.target.closest(".useful-link");
+  if (!curLink) return;
+  usefulLinks.forEach((link) => (link.style.opacity = this));
+  curLink.style.opacity = 1;
+};
+
 // Listeners
 showMenuBtn.addEventListener("click", handleShowMenu);
 closeMenuBtn.addEventListener("click", handleCloseMenu);
@@ -137,6 +146,8 @@ tabsContainer.addEventListener("click", handleActiveTab);
 siteHeader.addEventListener("mouseover", handleFadeMenuItems.bind(0.5));
 siteHeader.addEventListener("mouseout", handleFadeMenuItems.bind(1));
 siteHeader.addEventListener("click", handleClickMenu);
+usefulLinksContainer.addEventListener("mouseover", handleFadeLinks.bind(0.5));
+usefulLinksContainer.addEventListener("mouseout", handleFadeLinks.bind(1));
 
 // Observers
 // 1. Section revealer
