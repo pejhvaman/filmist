@@ -1045,7 +1045,7 @@ body {
 
   .modal {
     width: 94%;
-    height: 90vh;
+    height: 90svh;
     flex-direction: column;
     align-items: center;
   }
