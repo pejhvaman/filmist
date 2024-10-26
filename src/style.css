@@ -64,10 +64,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: absolute;
   padding: 1rem 2rem;
   background: var(--secondary-color-opacity);
   box-shadow: 0px 4px 10px 0px #735c757d;
+  z-index: 70;
+  /* transition: translate 0.4s ease-in-out; */
+}
+
+.site-header.sticky {
+  position: fixed;
+  animation: navFadeIn 0.5s ease-in-out 1;
+}
+
+@keyframes navFadeIn {
+  from {
+    transform: translateY(-8rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .logo {
@@ -161,6 +178,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 3rem;
+  padding-top: 10rem;
 }
 
 .site-header-content,
@@ -261,6 +279,11 @@ body {
   line-height: 1.6;
   text-transform: capitalize;
   margin-bottom: 3rem;
+}
+
+.explore {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .searchbar {
@@ -485,6 +508,7 @@ body {
 
 #message {
   height: 90px;
+  max-height: 130px;
 }
 
 .write-form > input:first-child {
@@ -527,6 +551,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 .cards {
@@ -595,6 +625,7 @@ body {
   width: 100%;
   height: 11rem;
   overflow: hidden;
+  z-index: 4 !important;
 }
 
 .card-picture {
@@ -602,6 +633,10 @@ body {
   width: 100%;
   height: 11rem;
   object-fit: cover;
+}
+
+.lazy-effect {
+  filter: blur(8px);
 }
 
 .card-like {
@@ -620,6 +655,7 @@ body {
   background-position: center;
   cursor: pointer;
   border: 4px solid #7ddbbd;
+  z-index: 2;
 }
 
 .card-like:hover {
@@ -742,6 +778,7 @@ body {
   color: var(--tertiary-color-darker);
   cursor: pointer;
   margin: 0.2rem;
+  /* transition: background 1s linear; */
 }
 
 .tab-active {
@@ -817,13 +854,14 @@ body {
   margin: 0 auto;
   border-radius: 24px;
   overflow: hidden;
-  height: 20rem;
+  height: 26rem;
 }
 
 .slider {
   width: 100%;
   height: 100%;
   list-style: none;
+  display: flex;
 }
 
 .slide {
@@ -877,7 +915,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50%;
+  height: 30%;
   background: linear-gradient(to top, rgb(0, 0, 0), rgba(255, 255, 255, 0));
   opacity: 0.9;
   z-index: 10;
@@ -965,6 +1003,7 @@ body {
   /* padding-top: 0.45rem; */
   border-radius: 4px;
   background: #7f5c8175;
+  transition: opacity 0.3s linear;
 }
 
 .site-footer .logo {
@@ -1045,14 +1084,14 @@ body {
 
   .modal {
     width: 94%;
-    height: 90svh;
+    height: 94svh;
     flex-direction: column;
     align-items: center;
   }
 
   .contact-us {
     width: 100%;
-    max-height: 50%;
+    height: fit-content;
     padding: 1rem 0.5rem;
     font-size: small;
     box-shadow: 0px 4px 10px 0px #bfa9c07d;
@@ -1071,7 +1110,7 @@ body {
   .write-us {
     padding: 0.2rem;
     width: 90%;
-    /* min-height: 50%; */
+    height: fit-content;
     height: -webkit-fill-available;
   }
 
@@ -1099,7 +1138,7 @@ body {
   .site-header-content {
     flex-direction: column;
     align-items: center;
-    padding: 3rem 0 6rem 0;
+    padding: 6rem 0 6rem 0;
   }
 
   .header-left {
@@ -1109,6 +1148,14 @@ body {
   .header-right {
     margin-left: unset;
     width: fit-content;
+  }
+
+  .header-describe {
+    font-size: smaller;
+  }
+
+  .header-title {
+    font-size: 2.4rem;
   }
 
   .site-body {
@@ -1212,6 +1259,7 @@ body {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .site-header-content {
     padding: 6rem;
+    padding-top: 10rem;
   }
 }
 /* desktop */

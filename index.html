@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="root">
-      <header class="header">
+      <header class="header" id="home">
         <div class="site-header">
           <img src="./img/logo.png" alt="Logo" class="logo" />
 
@@ -87,16 +87,16 @@
               </g>
             </svg>
             <li>
-              <a href="#" class="menu-item menu-active">home</a>
+              <a href="#home" class="menu-item menu-active">home</a>
             </li>
             <li>
-              <a href="#" class="menu-item">about</a>
+              <a href="#trendings" class="menu-item">trendings</a>
             </li>
             <li>
-              <a href="#" class="menu-item">most Popular</a>
+              <a href="#categories" class="menu-item">categories</a>
             </li>
             <li>
-              <a href="#" class="menu-item">news</a>
+              <a href="#top-films" class="menu-item">top films</a>
             </li>
             <li>
               <a href="#" class="menu-item contact-btn">contact us</a>
@@ -110,7 +110,7 @@
             <p class="header-describe">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
               delectus dignissimos sapiente ipsum inventore deserunt illo eum
-              porro optio quibusdam?
+              porro optio quibusdam? <em class="explore">explore &darr;</em>
             </p>
             <div class="searchbar">
               <input type="text" id="search" placeholder="type something" />
@@ -129,7 +129,7 @@
         </div>
       </header>
       <main class="site-body">
-        <section class="section cards">
+        <section class="section cards" id="trendings">
           <div class="section-header">
             <div class="section-intro">
               <h4 class="section-name">trendings</h4>
@@ -288,7 +288,7 @@
             </li>
           </ul>
         </section>
-        <section class="section galleries">
+        <section class="section galleries" id="categories">
           <div class="section-header">
             <div class="section-intro">
               <h4 class="section-name">categories</h4>
@@ -316,10 +316,7 @@
               </p>
             </li>
           </ul>
-          <div
-            class="tab-content tab-content-1 tab-content-active"
-            data-tab-content="1"
-          >
+          <div class="tab-content tab-content-1 tab-content-active">
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
                 <img
@@ -405,7 +402,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-content tab-content-2" data-tab-content="2">
+          <div class="tab-content tab-content-2">
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
                 <img
@@ -491,7 +488,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-content tab-content-3" data-tab-content="3">
+          <div class="tab-content tab-content-3">
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
                 <img
@@ -578,7 +575,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-content tab-content-4" data-tab-content="4">
+          <div class="tab-content tab-content-4">
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
                 <img
@@ -665,7 +662,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-content tab-content-5" data-tab-content="5">
+          <div class="tab-content tab-content-5">
             <div class="gallery-item">
               <a href="#" class="gallery-picture">
                 <img
@@ -753,7 +750,7 @@
             </div>
           </div>
         </section>
-        <section class="section slider-section">
+        <section class="section slider-section" id="top-films">
           <div class="section-header">
             <div class="section-intro">
               <h4 class="section-name">top films</h4>
@@ -815,24 +812,24 @@
                   <img
                     src="./img/the-dark-knight-lazy.jpg"
                     alt="slide 6"
-                    data-original="the-dark-knight.jpg"
+                    data-original="./img/the-dark-knight.jpg"
                   />
                 </a>
               </li>
             </ul>
             <ul class="slider-dots">
-              <li class="dot dot-active" data-slide="1"></li>
+              <!-- <li class="dot dot-active" data-slide="1"></li>
               <li class="dot" data-slide="2"></li>
               <li class="dot" data-slide="3"></li>
               <li class="dot" data-slide="4"></li>
               <li class="dot" data-slide="5"></li>
-              <li class="dot" data-slide="6"></li>
+              <li class="dot" data-slide="6"></li> -->
             </ul>
             <div class="slider-overlay"></div>
           </div>
         </section>
       </main>
-      <footer class="section site-footer">
+      <footer class="section site-footer" id="contact-us">
         <div class="section-header">
           <div class="section-intro">
             <h4 class="section-name">our shop</h4>
