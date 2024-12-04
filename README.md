@@ -1,3 +1,3 @@
 # Filmist site
 
-a responsive home page with vanilla JS
+a responsive landing page for a movies site with vanilla JS
